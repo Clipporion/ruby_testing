@@ -85,6 +85,6 @@ describe Array do
 
   # remove the 'x' before running this test
   it 'starts with 0, 1, 1, 2 and all are under 100' do
-    expect(fibonacci_sequence).to start_with(0,1,1,2).and all(be < 100)
+    expect(fibonacci_sequence).to start_with(0, 1, 1, 2).and all(be < 100)
   end
 end
