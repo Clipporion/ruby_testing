@@ -94,10 +94,12 @@ describe Drink do
       subject(:my_beverage) { described_class.new('cola', 16) }
       # remove the 'x' before running this test
       it 'is your choice of beverage' do
+        expect(my_beverage.type).to be('cola')
       end
 
       # remove the 'x' before running this test
       it 'has 16 ounces' do
+        expect(my_beverage.ounces).to be(16)
       end
     end
   end
@@ -106,7 +108,7 @@ describe Drink do
     context 'when drink has 16 ounces or more' do
       # Create an explicit subject, using 'described_class' and your choice of
       # beverage type.
-      subject(:new_drink) {described_class.new('tea', 59)}
+      subject(:new_drink) { described_class.new('tea', 59) }
       # remove the 'x' before running this test
       it 'is full' do
         expect(new_drink).to be_full
